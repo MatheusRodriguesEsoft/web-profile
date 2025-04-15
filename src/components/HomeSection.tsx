@@ -52,7 +52,8 @@ export const HomeSection = () => {
                 passHref
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-500 transition-colors"
+                className="w-14 h-14 rounded-full border-2 border-solid flex items-center justify-center hover:bg-(--color-default) duration-300 ease-in-out"
+                style={{ borderColor: "var(--color-default)" }}
               >
                 <Icon className="text-xl" />
               </Link>
