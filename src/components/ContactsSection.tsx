@@ -9,11 +9,11 @@ export const ContactsSection = () => {
   const currentYear = new Date().getFullYear();
   return (
     <section
-      className="w-full min-h-screen flex items-center justify-center bg-black pt-16"
+      className="w-full min-h-screen flex items-center justify-center bg-black"
       ref={sectionRefs[3]}
       id="contacts"
     >
-      <div className="w-full max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px]">
+      <div className="w-full max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px] pt-28">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 pb-20">
           {/* Informações de contato */}
           <div className="w-full lg:w-2/5">

@@ -25,10 +25,10 @@ export const HomeSection = () => {
         <span className="span text-[14pt] font-thin text-justify">
           Hey, I`m
         </span>
-        <h1 className="name flex text-[50pt] font-semibold z-2  my-5 leading-20">
+        <h1 className="name flex text-[50pt] font-black z-2  my-5 leading-20">
           Matheus Rodrigues
         </h1>
-        <div className="text-[14pt] font-thin text-justify mb-8">
+        <div className="text-[16pt] font-thin text-justify mb-8">
           {startTyping && (
             <Typewriter
               words={[
