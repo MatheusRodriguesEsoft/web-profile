@@ -27,45 +27,45 @@ export const ContactsSection = () => {
 
             <div className="space-y-6 mb-10">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center">
-                  <FiMail className="text-purple-500 text-xl" />
+                <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
+                  <FiMail className="text-white text-xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Email</h3>
-                  <p className="text-gray-400">contato@seudominio.com</p>
+                  <p className="text-gray-400">matheus.rodrigues.esoft@gmail.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center">
-                  <FiGithub className="text-purple-500 text-xl" />
+                <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
+                  <FiGithub className="text-white text-xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-medium">GitHub</h3>
                   <a
-                    href="https://github.com/seuperfil"
+                    href="https://github.com/MatheusRodriguesEsoft"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-500 transition-colors"
+                    className="text-white hover:text-(--color-default-hover) transition-colors"
                   >
-                    github.com/seuperfil
+                    github.com/matheus-rodrigues
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center">
-                  <FiLinkedin className="text-purple-500 text-xl" />
+                <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
+                  <FiLinkedin className="text-white text-xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-medium">LinkedIn</h3>
                   <a
-                    href="https://linkedin.com/in/seuperfil"
+                    href="https://www.linkedin.com/in/matheus-rodrigues-in/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-500 transition-colors"
+                    className="text-white hover:text-(--color-default-hover) transition-colors"
                   >
-                    linkedin.com/in/seuperfil
+                    linkedin.com/in/matheus-rodrigues
                   </a>
                 </div>
               </div>
