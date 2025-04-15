@@ -8,7 +8,7 @@ interface CardWorkProps {
 
 export const CardWork = ({ work }: CardWorkProps) => {
   return (
-    <div className="bg-neutral-950/60 w-full max-w-[380px] h-auto rounded overflow-hidden shadow-md transition-transform hover:scale-102 duration-300 ease-in-out">
+    <div className="bg-neutral-950/60 w-full max-w-[400px] h-auto rounded overflow-hidden shadow-md transition-transform hover:scale-102 duration-300 ease-in-out">
       <div className="relative h-48 w-full rounded-t-sm">
         <Image 
           src={work.img} 

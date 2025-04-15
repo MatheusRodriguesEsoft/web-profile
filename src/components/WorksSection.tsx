@@ -14,7 +14,7 @@ export const WorksSection = () => {
     >
       <div className="w-full max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px] pt-16">
         <div className="w-full h-auto flex items-center justify-center">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {works.map((work) => (
               <CardWork key={work.id} work={work} />
             ))}
