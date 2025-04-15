@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { ActionsContext } from "@/context/ActionsContext";
 import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
+import { FaWhatsapp } from 'react-icons/fa'
 
 export const ContactsSection = () => {
   const { sectionRefs } = useContext(ActionsContext);
@@ -26,6 +27,23 @@ export const ContactsSection = () => {
             </p>
 
             <div className="space-y-6 mb-10">
+            <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
+                  <FaWhatsapp className="text-white text-xl" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">Whatsapp</h3>
+
+                  <a
+                    href="https://wa.me/+5561998896788"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-(--color-default-hover) transition-colors"
+                  >
+                    whatsapp/(61)998896788
+                  </a>
+                </div>
+              </div>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
                   <FiMail className="text-white text-xl" />
