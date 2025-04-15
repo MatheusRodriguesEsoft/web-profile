@@ -26,18 +26,18 @@ export const CardWork = ({ work }: CardWorkProps) => {
             className="bg-(--color-default) hover:bg-(--color-default-hover) text-white px-3 py-1 rounded text-sm duration-300 ease-in-out"
             target="_blank"
           >
-            Ver Projeto
+            See Project
           </Link>
           <Link 
             href={work.repo} 
             className="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm duration-300 ease-in-out"
             target="_blank"
           >
-            Repositório
+            Repository
           </Link>
         </div>
         <div className="mt-2">
-          <p className="text-sm text-gray-300 mb-2">Tecnologias:</p>
+          <p className="text-sm text-gray-300 mb-2">Skills:</p>
           <ul className="flex flex-wrap gap-2">
             {work.skills.map((skill) => (
               <li key={skill.id} className="group">

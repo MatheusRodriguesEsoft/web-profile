@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { ActionsContext } from "@/context/ActionsContext";
 import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from "react-icons/fa";
 
 export const ContactsSection = () => {
   const { sectionRefs } = useContext(ActionsContext);
@@ -18,16 +18,16 @@ export const ContactsSection = () => {
           {/* Informações de contato */}
           <div className="w-full lg:w-2/5">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Vamos <span className="text-purple-600">conversar</span>
+              Let`s <span className="text-purple-600">talk</span>
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              Estou sempre aberto a novas oportunidades, colaborações e projetos
-              interessantes. Entre em contato comigo através do formulário ou
-              por uma das plataformas abaixo.
+              I am always open to new opportunities, collaborations and
+              interesting projects. Contact me using the form or through one of
+              the platforms below.
             </p>
 
             <div className="space-y-6 mb-10">
-            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-(--color-default) flex items-center justify-center">
                   <FaWhatsapp className="text-white text-xl" />
                 </div>
@@ -102,14 +102,14 @@ export const ContactsSection = () => {
           <div className="w-full lg:w-3/5">
             <div className="bg-neutral-950/60 rounded p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Me envie uma mensagem
+                Send me a message
               </h3>
 
               <form onSubmit={() => {}} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-gray-300 mb-2">
-                      Seu nome
+                    Your name
                     </label>
                     <input
                       type="text"
@@ -117,13 +117,13 @@ export const ContactsSection = () => {
                       name="name"
                       required
                       className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600"
-                      placeholder="Digite seu nome"
+                      placeholder="Enter your name"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-gray-300 mb-2">
-                      Seu email
+                    Your email
                     </label>
                     <input
                       type="email"
@@ -131,14 +131,14 @@ export const ContactsSection = () => {
                       name="email"
                       required
                       className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600"
-                      placeholder="Digite seu email"
+                      placeholder="Enter your email"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">
-                    Mensagem
+                  Message
                   </label>
                   <textarea
                     id="message"
@@ -146,7 +146,7 @@ export const ContactsSection = () => {
                     required
                     rows={6}
                     className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none"
-                    placeholder="Digite sua mensagem"
+                    placeholder="Type your message"
                   ></textarea>
                 </div>
 
@@ -157,10 +157,10 @@ export const ContactsSection = () => {
                   >
                     <>
                       <FiSend />
-                      <span>Enviar mensagem</span>
+                      <span>Send message</span>
                     </>
                   </button>
-                </div>
+                </div> 
               </form>
             </div>
           </div>
@@ -169,8 +169,8 @@ export const ContactsSection = () => {
         <div className="border-t border-neutral-800 py-6">
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col sm:flex-row justify-center items-center">
             <p className="text-sm text-gray-500 mb-4 sm:mb-0">
-              © {currentYear} by Matheus Rodrigues. Todos os direitos
-              reservados.
+              © {currentYear} by Matheus Rodrigues. All rights
+              reserved.
             </p>
           </div>
         </div>
