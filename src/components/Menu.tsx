@@ -75,7 +75,7 @@ export const Menu = () => {
         />
       </button>
       <ul
-        className={` bg-primary-base dark:bg-elevated transition-all absolute w-full flex flex-col items-center left-0 max-md:top-[110.5px] 
+        className={` bg-black dark:bg-elevated transition-all absolute w-full flex flex-col items-center left-0  
         ${
           openMenu
             ? "opacity-100 translate-y-0 visible"
