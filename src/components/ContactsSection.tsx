@@ -32,7 +32,7 @@ export const ContactsSection = () => {
                   <FaWhatsapp className="text-white text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-white font-medium">Whatsapp</h3>
+                  <h3 className="text-white font-medium">WhatsApp</h3>
 
                   <a
                     href="https://wa.me/+5561998896788"
