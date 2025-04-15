@@ -80,7 +80,7 @@ export const Menu = () => {
         {menuLinks.map(({ id, to, label }) => (
           <li
             key={id}
-            className="w-full text-white px-5 py-3 md:px-0 md:py-0 md:w-auto"
+            className="w-full text-white px-5 py-3 md:px-0 md:py-0 md:w-auto animate__animated animate__backInDown"
           >
             <Link
               to={to}
