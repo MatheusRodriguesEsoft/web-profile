@@ -34,7 +34,7 @@ export const ContactsSection = () => {
                   <h3 className="text-white font-medium">Email</h3>
 
                   <a
-                    href="malito:matheus.rodrigues.esoft@gmail.com"
+                    href="mailto:matheus.rodrigues.esoft@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-(--color-default-hover) transition-colors"
