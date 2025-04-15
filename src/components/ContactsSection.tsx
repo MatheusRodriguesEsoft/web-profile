@@ -18,7 +18,7 @@ export const ContactsSection = () => {
           {/* Informações de contato */}
           <div className="w-full lg:w-2/5">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Let`s <span className="text-purple-600">talk</span>
+              Let`s <span className="text-(--color-default)">talk</span>
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
               I am always open to new opportunities, collaborations and
