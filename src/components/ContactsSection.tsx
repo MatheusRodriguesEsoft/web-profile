@@ -32,7 +32,15 @@ export const ContactsSection = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Email</h3>
-                  <p className="text-gray-400">matheus.rodrigues.esoft@gmail.com</p>
+
+                  <a
+                    href="malito:matheus.rodrigues.esoft@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-(--color-default-hover) transition-colors"
+                  >
+                    matheus.rodrigues.esoft@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -143,9 +151,9 @@ export const ContactsSection = () => {
         <div className="border-t border-neutral-800 py-6">
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col sm:flex-row justify-center items-center">
             <p className="text-sm text-gray-500 mb-4 sm:mb-0">
-              © {currentYear} by Matheus Rodrigues. Todos os direitos reservados.
+              © {currentYear} by Matheus Rodrigues. Todos os direitos
+              reservados.
             </p>
-            
           </div>
         </div>
       </div>
