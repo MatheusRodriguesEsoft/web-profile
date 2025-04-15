@@ -7,13 +7,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ActionsContext } from "@/context/ActionsContext";
 import { Link } from "react-scroll";
 import Image from "next/image";
-
-const menuLinks = [
-  { id: 0, to: "home", label: "Home" },
-  { id: 1, to: "skills", label: "Skills" },
-  { id: 2, to: "works", label: "Works" },
-  { id: 3, to: "contacts", label: "Contact" },
-];
+import { menuLinks } from "@/resources/menu";
 
 export const Menu = () => {
   const { visibleSectionIndex } = useContext(ActionsContext);

@@ -6,7 +6,6 @@ import "./globals.css";
 import "animate.css";
 import { ActionsProvider } from "@/context/ActionsContext";
 import { Header } from "@/components/Header";
-// import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Maheus Rodrigues",
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={questrial.variable} suppressHydrationWarning>
+    <html lang="en" className={`${questrial.variable} h-auto`} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
@@ -40,7 +39,6 @@ export default function RootLayout({
           <ActionsProvider>
             <Header />
             {children}
-            {/* <Footer /> */}
           </ActionsProvider>
         </ThemeProvider>
       </body>

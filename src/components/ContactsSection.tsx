@@ -5,15 +5,15 @@ import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 
 export const ContactsSection = () => {
   const { sectionRefs } = useContext(ActionsContext);
-
+  const currentYear = new Date().getFullYear();
   return (
     <section
-      className="w-full min-h-screen flex items-center justify-center bg-black py-16"
+      className="w-full min-h-screen flex items-center justify-center bg-black pt-16"
       ref={sectionRefs[3]}
       id="contacts"
     >
       <div className="w-full max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px]">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 pb-20">
           {/* Informações de contato */}
           <div className="w-full lg:w-2/5">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -137,6 +137,15 @@ export const ContactsSection = () => {
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+        {/* Copyright e créditos */}
+        <div className="border-t border-neutral-800 py-6">
+          <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col sm:flex-row justify-center items-center">
+            <p className="text-sm text-gray-500 mb-4 sm:mb-0">
+              © {currentYear} by Matheus Rodrigues. Todos os direitos reservados.
+            </p>
+            
           </div>
         </div>
       </div>
