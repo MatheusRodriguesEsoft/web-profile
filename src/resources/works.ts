@@ -24,7 +24,7 @@ export const works: Work[] = [
     name: 'SHE&HE',
     page: 'http://sheandhestore.com.br',
     img: '/imgs/bg-default.jpg',
-    repo: 'https://github.com/MTheusRodrigues/sheandhe',
+    repo: 'https://github.com/MatheusRodriguesEsoft/sheandhe-app-store',
     skills: [ { id: 0, }]
   },
   {
@@ -38,7 +38,7 @@ export const works: Work[] = [
   {
     id: Math.random(),
     name: 'Moveit Premuim',
-    page: 'https://moveit.com.br',
+    page: 'https://moveitpremium.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MTheusRodrigues/Moveit-Premium',
     skills: [ { id: 0, }]
