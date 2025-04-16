@@ -100,7 +100,7 @@ export const Menu = () => {
           className={"animation hidden md:block"}
           style={underlineStyle}
         ></div>
-        <button className="absolute right-15 top-[-38] md:relative md:top-0 md:right-1 w-8 h-8 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={() => setOnStars(!onStars)}>
+        <button className="absolute right-15 top-[-38] md:relative md:top-0 md:right-1 w-8 h-8 transition-all duration-500 hover:scale-105 cursor-pointer animate__animated animate__backInDown" onClick={() => setOnStars(!onStars)}>
           <img
             src={onStars ? "/icons/on-stars.svg" : "icons/off-stars.svg"}
             alt="stars"
