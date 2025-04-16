@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import CloseIcon from "@/../public/icons/close.svg";
 import MenuIcon from "@/../public/icons/menu.svg";
@@ -10,7 +11,8 @@ import Image from "next/image";
 import { menuLinks } from "@/resources/menu";
 
 export const Menu = () => {
-  const { visibleSectionIndex } = useContext(ActionsContext);
+  const { visibleSectionIndex, onStars, setOnStars } =
+    useContext(ActionsContext);
   const [openMenu, setOpenMenu] = useState(false);
   const [underlineStyle, setUnderlineStyle] = useState({});
   const menuRef = useRef<HTMLDivElement>(null);
@@ -34,17 +36,16 @@ export const Menu = () => {
   const setActiveItem = (index: number) => {
     const ul = menuRef.current?.querySelector("ul");
     if (!ul) return;
-  
+
     const menuItems = ul.querySelectorAll("li");
     if (!menuItems[index]) return;
-  
+
     const menuItem = menuItems[index];
     const { left, width } = menuItem.getBoundingClientRect();
     const parentLeft = ul.getBoundingClientRect().left;
-  
+
     setUnderlineStyle({ left: left - parentLeft, width });
   };
-  
 
   const updateUnderline = (index: number) => {
     setActiveItem(index);
@@ -69,7 +70,7 @@ export const Menu = () => {
         />
       </button>
       <ul
-        className={` bg-black dark:bg-elevated transition-all absolute w-full flex flex-col items-center left-0  
+        className={`bg-black md:bg-transparent transition-all absolute w-full flex flex-col items-center left-0  
         ${
           openMenu
             ? "opacity-100 translate-y-0 visible"
@@ -99,6 +100,12 @@ export const Menu = () => {
           className={"animation hidden md:block"}
           style={underlineStyle}
         ></div>
+        <button className="absolute right-15 top-[-38] md:relative md:top-0 md:right-1 w-8 h-8 transition-all duration-500 hover:scale-105 cursor-pointer" onClick={() => setOnStars(!onStars)}>
+          <img
+            src={onStars ? "/icons/on-stars.svg" : "icons/off-stars.svg"}
+            alt="stars"
+          />
+        </button>
       </ul>
     </nav>
   );

@@ -9,7 +9,7 @@ export const ContactsSection = () => {
   const currentYear = new Date().getFullYear();
   return (
     <section
-      className="w-full min-h-screen flex items-center justify-center bg-black"
+      className="w-full min-h-screen flex items-center justify-center"
       ref={sectionRefs[3]}
       id="contacts"
     >

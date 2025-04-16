@@ -4,9 +4,10 @@ import { Typewriter } from "react-simple-typewriter";
 import { useContext, useLayoutEffect, useState } from "react";
 import { socialMediaLinks } from "@/resources/data";
 import Link from "next/link";
+import StarsCanvas from "./StarsCanvas";
 
 export const HomeSection = () => {
-  const { sectionRefs } = useContext(ActionsContext);
+  const { sectionRefs, onStars } = useContext(ActionsContext);
   const [startTyping, setStartTyping] = useState(false);
 
   useLayoutEffect(() => {
@@ -61,6 +62,7 @@ export const HomeSection = () => {
           })}
         </div>
       </div>
+      {onStars ? <StarsCanvas /> : ""}
     </section>
   );
 };

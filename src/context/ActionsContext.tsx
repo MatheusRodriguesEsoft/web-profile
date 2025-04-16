@@ -1,8 +1,10 @@
 "use client";
 import {
   createContext,
+  Dispatch,
   ReactNode,
   RefObject,
+  SetStateAction,
   useEffect,
   useRef,
   useState,
@@ -10,6 +12,8 @@ import {
 
 interface ActionsContextData {
   sectionRefs: RefObject<HTMLElement | null>[];
+  onStars: boolean;
+  setOnStars: Dispatch<SetStateAction<boolean>>;
   visibleSectionIndex: number;
   scrollY: number;
 }
@@ -22,6 +26,7 @@ export const ActionsContext = createContext({} as ActionsContextData);
 
 export function ActionsProvider({ children }: ActionsProviderProps) {
   const [visibleSectionIndex, setVisibleSectionIndex] = useState(0);
+  const [onStars, setOnStars] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const sections = ["home", "skills", "works", "contacts"];
   const sectionRefs = [
@@ -59,7 +64,7 @@ export function ActionsProvider({ children }: ActionsProviderProps) {
     });
 
     return () => observer.disconnect();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -76,7 +81,7 @@ export function ActionsProvider({ children }: ActionsProviderProps) {
 
   return (
     <ActionsContext.Provider
-      value={{ sectionRefs, visibleSectionIndex, scrollY }}
+      value={{ sectionRefs, visibleSectionIndex, scrollY, onStars, setOnStars }}
     >
       {children}
     </ActionsContext.Provider>
