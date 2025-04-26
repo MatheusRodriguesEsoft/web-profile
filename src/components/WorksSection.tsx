@@ -8,7 +8,7 @@ export const WorksSection = () => {
   const { sectionRefs } = useContext(ActionsContext);
   return (
     <section
-      className="works works_content w-full flex h-auto sm:h-full items-center justify-center py-16"
+      className="works works_content w-full flex h-auto items-center justify-center py-16"
       ref={sectionRefs[2]}
       id={"works"}
     >

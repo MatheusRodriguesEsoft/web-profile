@@ -9,11 +9,11 @@ export const SkillsSection = () => {
 
   return (
     <section
-      className="section skills skills_content"
+      className="section skills skills_content h-auto sm:h-screen"
       ref={sectionRefs[1]}
-      id={"skills"}
+      id={"skills"}  
     >
-      <div className="w-screen h-screen max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px] flex items-center justify-center flex-col ">
+      <div className="w-screen sm:h-screen max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px] flex items-center justify-center flex-col ">
         <div className="w-full my-20">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-4 sm:gap-6 md:gap-8">
             {iconsSkills.map((icon) => (

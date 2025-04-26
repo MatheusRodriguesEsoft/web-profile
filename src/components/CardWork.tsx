@@ -21,7 +21,7 @@ export const CardWork = ({ work }: CardWorkProps) => {
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2">{work.name}</h3>
         <div className="flex gap-4 mb-3">
-          <Link 
+          <Link aria-disabled
             href={work.page} 
             className="bg-(--color-default) hover:bg-(--color-default-hover) text-white px-3 py-1 rounded text-sm duration-300 ease-in-out"
             target="_blank"
