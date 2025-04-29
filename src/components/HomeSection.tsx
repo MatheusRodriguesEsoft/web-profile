@@ -26,7 +26,7 @@ export const HomeSection = () => {
         <span className="span text-[14pt] font-thin text-justify">
           Hey, I`m
         </span>
-        <h1 className="name flex text-[30pt] lg:text-[50pt] font-black z-2  my-5 leading-10 lg:leading-20">
+        <h1 className="name flex text-[30pt] lg:text-[50pt] font-black  my-5 leading-10 lg:leading-20">
           Matheus Rodrigues
         </h1>
         <div className="text-[16pt] font-thin text-justify mb-8">
@@ -53,7 +53,7 @@ export const HomeSection = () => {
                 passHref
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full border-2 border-solid flex items-center justify-center hover:bg-(--color-default) duration-300 ease-in-out"
+                className="w-14 h-14 rounded-full border-2 border-solid flex items-center justify-center hover:bg-(--color-default) cursor-pointer duration-300 ease-in-out"
                 style={{ borderColor: "var(--color-default)" }}
               >
                 <Icon className="text-xl" />
