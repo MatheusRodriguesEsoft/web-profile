@@ -19,7 +19,7 @@ export const CardWork = ({ work }: CardWorkProps) => {
         />
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-bold mb-2">{work.name}</h3>
+        <h3 className="text-lg text-white font-bold mb-2">{work.name}</h3>
         <div className="flex gap-4 mb-3">
           <Link aria-disabled
             href={work.page} 
