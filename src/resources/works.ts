@@ -1,4 +1,4 @@
-import { IconSkill } from "./icons-skill"
+import { IconSkill, iconsSkills } from "./icons-skill"
 
 
 export interface Work {
@@ -17,7 +17,7 @@ export const works: Work[] = [
     page: 'http://videomentor.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MatheusRodriguesEsoft/app-videomentor',
-    skills: [ { id: 0, }]
+    skills: [iconsSkills[0],iconsSkills[2],iconsSkills[5],iconsSkills[8],iconsSkills[10]]
   },
   {
     id: Math.random(),
@@ -25,7 +25,7 @@ export const works: Work[] = [
     page: 'http://sheandhestore.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MatheusRodriguesEsoft/sheandhe-app-store',
-    skills: [ { id: 0, }]
+    skills:  [iconsSkills[0],iconsSkills[2],iconsSkills[5],iconsSkills[3],iconsSkills[8],iconsSkills[10],iconsSkills[11]]
   },
   {
     id: Math.random(),
@@ -33,7 +33,7 @@ export const works: Work[] = [
     page: 'https://musicdown.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MTheusRodrigues/muscidown',
-    skills: [ { id: 0, }]
+    skills: [iconsSkills[1],iconsSkills[2],iconsSkills[5],iconsSkills[8],iconsSkills[10]]
   },
   {
     id: Math.random(),
@@ -41,7 +41,7 @@ export const works: Work[] = [
     page: 'https://moveitpremium.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MTheusRodrigues/Moveit-Premium',
-    skills: [ { id: 0, }]
+    skills: [iconsSkills[1],iconsSkills[8]]
   },
   {
     id: Math.random(),
@@ -49,7 +49,7 @@ export const works: Work[] = [
     page: 'https://bagmanager.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MTheusRodrigues/Bag-Manager',
-    skills: [ { id: 0, }]
+    skills: [ iconsSkills[9],iconsSkills[11]]
   },
   {
     id: Math.random(),
@@ -57,6 +57,6 @@ export const works: Work[] = [
     page: 'https://landingpage.com.br',
     img: '/imgs/bg-default.jpg',
     repo: 'https://github.com/MTheusRodrigues/Landign-Page',
-    skills: [ { id: 0, }]
+    skills: [iconsSkills[0],iconsSkills[8]]
   },
 ]
