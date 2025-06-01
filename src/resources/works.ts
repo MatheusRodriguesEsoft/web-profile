@@ -15,7 +15,7 @@ export const works: Work[] = [
     id: Math.random(),
     name: 'VideoMentor',
     page: 'http://videomentor.com.br',
-    img: '/imgs/bg-default.jpg',
+    img: '/imgs/videomentor.png',
     repo: 'https://github.com/MatheusRodriguesEsoft/app-videomentor',
     skills: [iconsSkills[0],iconsSkills[2],iconsSkills[5],iconsSkills[8],iconsSkills[10]]
   },
