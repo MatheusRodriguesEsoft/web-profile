@@ -29,7 +29,7 @@ export const ActionsContext = createContext({} as ActionsContextData);
 
 export function ActionsProvider({ children }: ActionsProviderProps) {
   const [visibleSectionIndex, setVisibleSectionIndex] = useState(0);
-  const [lang, setLang] = useState<LangEnum>(LangEnum.EN_US);
+  const [lang, setLang] = useState<LangEnum>(LangEnum.PT_BR);
   const [onStars, setOnStars] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const sections = ["home", "skills", "works", "contacts"];
