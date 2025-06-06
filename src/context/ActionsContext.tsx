@@ -1,4 +1,5 @@
 "use client";
+import LangEnum from "@/enum/lang-enum";
 import {
   createContext,
   Dispatch,
@@ -13,6 +14,8 @@ import {
 interface ActionsContextData {
   sectionRefs: RefObject<HTMLElement | null>[];
   onStars: boolean;
+  lang: LangEnum;
+  setLang: Dispatch<SetStateAction<LangEnum>>;
   setOnStars: Dispatch<SetStateAction<boolean>>;
   visibleSectionIndex: number;
   scrollY: number;
@@ -26,6 +29,7 @@ export const ActionsContext = createContext({} as ActionsContextData);
 
 export function ActionsProvider({ children }: ActionsProviderProps) {
   const [visibleSectionIndex, setVisibleSectionIndex] = useState(0);
+  const [lang, setLang] = useState<LangEnum>(LangEnum.EN_US);
   const [onStars, setOnStars] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const sections = ["home", "skills", "works", "contacts"];
@@ -81,7 +85,15 @@ export function ActionsProvider({ children }: ActionsProviderProps) {
 
   return (
     <ActionsContext.Provider
-      value={{ sectionRefs, visibleSectionIndex, scrollY, onStars, setOnStars }}
+      value={{
+        sectionRefs,
+        lang,
+        visibleSectionIndex,
+        scrollY,
+        onStars,
+        setOnStars,
+        setLang,
+      }}
     >
       {children}
     </ActionsContext.Provider>

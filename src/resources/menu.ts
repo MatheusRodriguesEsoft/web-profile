@@ -1,6 +1,8 @@
-export const menuLinks = [
-  { id: 0, to: "home", label: "Home" },
-  { id: 1, to: "skills", label: "Skills" },
-  { id: 2, to: "works", label: "Works" },
-  { id: 3, to: "contacts", label: "Contact" },
+import { type MenuKey } from "@/resources/lang";
+
+export const menuLinks: { id: number; to: string; label: MenuKey }[] = [
+  { id: 0, to: "home", label: "home" },
+  { id: 1, to: "skills", label: "skills" },
+  { id: 2, to: "works", label: "works" },
+  { id: 3, to: "contacts", label: "contact" },
 ];

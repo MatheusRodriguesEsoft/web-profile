@@ -8,19 +8,36 @@ export interface LabelLang {
   label: string;
 }
 
+export interface Translations {
+  menu: {
+    home: string;
+    skills: string;
+    works: string;
+    contact: string;
+  };
+  about: {
+    description: string;
+  };
+}
+
 export const labelLangs: LabelLang[] = [
   { value: "en-US", label: "EN" },
   { value: "es-ES", label: "ES" },
   { value: "pt-BR", label: "PT" },
 ];
 
-const languages = {
-  [LangEnum.EN_US]: enUS.menu,
-  [LangEnum.ES_ES]: esES.menu,
-  [LangEnum.PT_BR]: ptBr.menu,
+const languages: Record<LangEnum, Translations> = {
+  [LangEnum.EN_US]: enUS,
+  [LangEnum.ES_ES]: esES,
+  [LangEnum.PT_BR]: ptBr,
 };
 
-export const defineLanguage = (lang: LangEnum, labelKey: string): string => {
-  const translation = languages[lang][labelKey as keyof typeof enUS.menu];
-  return translation || labelKey;
+export type MenuKey = keyof Translations["menu"];
+
+export const defineLanguage = (lang: LangEnum, labelKey: MenuKey): string => {
+  return languages[lang].menu[labelKey];
+};
+
+export const getTranslation = (lang: LangEnum): Translations => {
+  return languages[lang];
 };

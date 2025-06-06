@@ -12,13 +12,12 @@ import LangEnum from "@/enum/lang-enum";
 import { defineLanguage, labelLangs } from "@/resources/lang";
 
 export const Menu = () => {
-  const { visibleSectionIndex, onStars, setOnStars } =
+  const { visibleSectionIndex, onStars, lang, setOnStars, setLang } =
     useContext(ActionsContext);
   const [openMenu, setOpenMenu] = useState(false);
   const [underlineStyle, setUnderlineStyle] = useState({});
   const menuRef = useRef<HTMLDivElement>(null);
   const [showButtons, setShowButtons] = useState(false);
-  const [lang, setLang] = useState<LangEnum>(LangEnum.EN_US);
 
   useEffect(() => {
     setActiveItem(visibleSectionIndex);
@@ -103,7 +102,8 @@ export const Menu = () => {
               onMouseEnter={() => updateUnderline(id)}
               onMouseOut={onMouseOut}
             >
-              {defineLanguage(lang, label.toLowerCase())}
+              {defineLanguage(lang, label)}
+
             </Link>
           </li>
         ))}

@@ -1,13 +1,13 @@
 "use client";
 import { ActionsContext } from "@/context/ActionsContext";
-import { Typewriter } from "react-simple-typewriter";
 import { useContext, useLayoutEffect, useState } from "react";
 import { socialMediaLinks } from "@/resources/data";
 import Link from "next/link";
 import StarsCanvas from "./StarsCanvas";
+import { AboutDescription } from "./AboutDescription";
 
 export const HomeSection = () => {
-  const { sectionRefs, onStars } = useContext(ActionsContext);
+  const { sectionRefs, onStars, lang } = useContext(ActionsContext);
   const [startTyping, setStartTyping] = useState(false);
 
   useLayoutEffect(() => {
@@ -31,16 +31,8 @@ export const HomeSection = () => {
         </h1>
         <div className="text-[16pt] font-thin text-justify text-white mb-8">
           {startTyping && (
-            <Typewriter
-              words={[
-                "I'm a software engineer based in Formosa, Brazil, I enjoy creating things that live on the internet, whether that's websites, apps or anything in between. I've been freelancing for four years while studying at university and have managed to gain a fair amount of experience and valuable knowledge from all sorts of fields throughout my projects/work.",
-              ]}
-              loop={false}
-              cursor
-              typeSpeed={25}
-              deleteSpeed={999999}
-              delaySpeed={1000}
-            />
+           <AboutDescription lang={lang} />
+
           )}
         </div>
         <div className="flex gap-4">
