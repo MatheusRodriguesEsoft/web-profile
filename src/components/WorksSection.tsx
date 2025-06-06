@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CardWork } from "./CardWork";
 
 export const WorksSection = () => {
-  const { sectionRefs } = useContext(ActionsContext);
+  const { sectionRefs, lang } = useContext(ActionsContext);
   return (
     <section
       className="works works_content w-full flex h-auto items-center justify-center py-16"
@@ -16,7 +16,7 @@ export const WorksSection = () => {
         <div className="w-full h-auto flex items-center justify-center">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {works.map((work) => (
-              <CardWork key={work.id} work={work} />
+              <CardWork key={work.id} work={work} lang={lang} />
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@ import { socialMediaLinks } from "@/resources/data";
 import Link from "next/link";
 import StarsCanvas from "./StarsCanvas";
 import { AboutDescription } from "./AboutDescription";
+import { getTranslation } from "@/resources/lang";
 
 export const HomeSection = () => {
   const { sectionRefs, onStars, lang } = useContext(ActionsContext);
@@ -24,7 +25,7 @@ export const HomeSection = () => {
     >
       <div className="w-screen h-screen max-w-[1440px] px-[20px] md:px-[80px] lg:px-[120px] flex flex-col justify-center">
         <span className="span text-[14pt] font-thin text-white text-justify">
-          Hey, I`m
+          {getTranslation(lang).about.greeting}
         </span>
         <h1 className="name flex text-[30pt] lg:text-[50pt] font-black  my-5 leading-10 lg:leading-20">
           Matheus Rodrigues

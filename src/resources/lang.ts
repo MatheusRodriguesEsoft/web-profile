@@ -16,7 +16,13 @@ export interface Translations {
     contact: string;
   };
   about: {
+    greeting: string;
     description: string;
+  };
+  works: {
+    seeProject: string;
+    repository: string;
+    skills: string;
   };
 }
 
