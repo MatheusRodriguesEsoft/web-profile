@@ -4,12 +4,14 @@ import { ActionsContext } from "@/context/ActionsContext";
 import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import { getTranslation } from "@/resources/lang";
 
 export const ContactsSection = () => {
-  const { sectionRefs } = useContext(ActionsContext);
+  const { sectionRefs, lang } = useContext(ActionsContext);
   const currentYear = new Date().getFullYear();
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const translation = getTranslation(lang);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,12 +27,11 @@ export const ContactsSection = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(() => {
-        alert("Mensagem enviada com sucesso!");
+        alert(translation.contacts.success);
         formRef.current?.reset();
       })
-      .catch((error) => {
-        console.error("Erro ao enviar:", error);
-        alert("Erro ao enviar mensagem. Tente novamente.");
+      .catch(() => {
+        alert(translation.contacts.error);
       })
       .finally(() => setLoading(false));
   };
@@ -46,12 +47,14 @@ export const ContactsSection = () => {
           {/* Informações de contato */}
           <div className="w-full lg:w-2/5">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Let&apos;s <span className="text-(--color-default)">talk</span>
+              {translation.contacts.title.split(" ")[0]}{" "}
+              <span className="text-(--color-default)">
+                {translation.contacts.title.split(" ")[1]}
+              </span>
             </h2>
+
             <p className="text-gray-300 mb-8 text-lg">
-              I am always open to new opportunities, collaborations and
-              interesting projects. Contact me using the form or through one of
-              the platforms below.
+              {translation.contacts.subtitle}
             </p>
 
             <div className="space-y-6 mb-10">
@@ -129,14 +132,14 @@ export const ContactsSection = () => {
           <div className="w-full lg:w-3/5">
             <div className="bg-neutral-950/60 rounded p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Send me a message
+                {translation.contacts.form.title}
               </h3>
 
               <form ref={formRef} onSubmit={sendEmail} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-gray-300 mb-2">
-                      Your name
+                      {translation.contacts.form.name}
                     </label>
                     <input
                       type="text"
@@ -144,12 +147,12 @@ export const ContactsSection = () => {
                       name="name"
                       required
                       className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600"
-                      placeholder="Enter your name"
+                      placeholder={translation.contacts.form.placeholderName}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-gray-300 mb-2">
-                      Your email
+                      {translation.contacts.form.email}
                     </label>
                     <input
                       type="email"
@@ -157,13 +160,13 @@ export const ContactsSection = () => {
                       name="email"
                       required
                       className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600"
-                      placeholder="Enter your email"
+                      placeholder={translation.contacts.form.placeholderEmail}
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">
-                    Message
+                    {translation.contacts.form.message}
                   </label>
                   <textarea
                     id="message"
@@ -171,7 +174,7 @@ export const ContactsSection = () => {
                     required
                     rows={6}
                     className="w-full bg-neutral-700 text-white px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none"
-                    placeholder="Type your message"
+                    placeholder={translation.contacts.form.placeholderMessage}
                   ></textarea>
                 </div>
                 <div>
@@ -182,7 +185,11 @@ export const ContactsSection = () => {
                   >
                     <>
                       <FiSend />
-                      <span>{loading ? "Sending..." : "Send message"}</span>
+                      <span>
+                        {loading
+                          ? translation.contacts.form.sending
+                          : translation.contacts.form.send}
+                      </span>
                     </>
                   </button>
                 </div>
@@ -195,7 +202,8 @@ export const ContactsSection = () => {
         <div className="border-t border-neutral-800 py-6">
           <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col sm:flex-row justify-center items-center">
             <p className="text-sm text-gray-500 mb-4 sm:mb-0">
-              © {currentYear} by Matheus Rodrigues. All rights reserved.
+              © {currentYear} by Matheus Rodrigues.{" "}
+              {translation.contacts.footer}.
             </p>
           </div>
         </div>

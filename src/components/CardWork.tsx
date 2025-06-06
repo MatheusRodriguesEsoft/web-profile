@@ -31,19 +31,19 @@ export const CardWork = ({ work, lang }: CardWorkProps) => {
             className="bg-(--color-default) hover:bg-(--color-default-hover) text-white px-3 py-1 rounded text-sm duration-300 ease-in-out"
             target="_blank"
           >
-            {translation.works.seeProject}
+            {translation.workCard.seeProject}
           </Link>
           <Link
             href={work.repo}
             className="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm duration-300 ease-in-out"
             target="_blank"
           >
-            {translation.works.repository}
+            {translation.workCard.repository}
           </Link>
         </div>
         <div className="mt-2">
           <p className="text-sm text-gray-300 mb-2">
-            {translation.works.skills}:
+            {translation.workCard.skills}:
           </p>
           <ul className="flex flex-wrap gap-2">
             {work.skills.map((skill) => (

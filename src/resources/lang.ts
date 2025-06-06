@@ -9,20 +9,30 @@ export interface LabelLang {
 }
 
 export interface Translations {
-  menu: {
-    home: string;
-    skills: string;
-    works: string;
-    contact: string;
-  };
-  about: {
-    greeting: string;
-    description: string;
-  };
-  works: {
-    seeProject: string;
-    repository: string;
-    skills: string;
+  menu: { home: string; skills: string; works: string; contact: string };
+  about: { greeting: string; description: string };
+  workCard: { seeProject: string; repository: string; skills: string };
+  contacts: {
+    title: string;
+    subtitle: string;
+    whatsapp: string;
+    email: string;
+    github: string;
+    linkedin: string;
+    form: {
+      title: string;
+      name: string;
+      email: string;
+      message: string;
+      placeholderName: string;
+      placeholderEmail: string;
+      placeholderMessage: string;
+      send: string;
+      sending: string;
+    };
+    footer: string;
+    success: string;
+    error: string;
   };
 }
 
