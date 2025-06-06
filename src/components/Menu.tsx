@@ -114,7 +114,7 @@ export const Menu = () => {
           onClick={() => setShowButtons(!showButtons)}
         >
           <div>
-            <span className="hover: cursor-pointer">
+            <span className="text-white hover: cursor-pointer">
               {getLabelByValue(lang)}
             </span>
           </div>
@@ -125,7 +125,7 @@ export const Menu = () => {
               onMouseOut={() => setShowButtons(false)}
             >
               <button
-                className={`font-thin mb-[.8rem] hover:cursor-pointer hover:text-(--clr-default) ${
+                className={`font-thin text-white mb-[.8rem] hover:cursor-pointer hover:text-(--clr-default) ${
                   lang === LangEnum.EN_US ? "hidden" : ""
                 }`}
                 onClick={() => setLang(LangEnum.EN_US)}
@@ -133,7 +133,7 @@ export const Menu = () => {
                 {getLabelByValue(LangEnum.EN_US)}
               </button>
               <button
-                className={`font-thin mb-[.8rem] hover:cursor-pointer  hover:text-(--clr-default) ${
+                className={`font-thin text-white mb-[.8rem] hover:cursor-pointer  hover:text-(--clr-default) ${
                   lang === LangEnum.ES_ES ? "hidden" : ""
                 }`}
                 onClick={() => setLang(LangEnum.ES_ES)}
@@ -141,7 +141,7 @@ export const Menu = () => {
                 {getLabelByValue(LangEnum.ES_ES)}
               </button>
               <button
-                className={`font-thin mb-[.8rem] hover:cursor-pointer  hover:text-(--clr-default) ${
+                className={`font-thin text-white mb-[.8rem] hover:cursor-pointer  hover:text-(--clr-default) ${
                   lang === LangEnum.PT_BR ? "hidden" : ""
                 }`}
                 onClick={() => setLang(LangEnum.PT_BR)}
