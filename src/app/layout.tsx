@@ -8,7 +8,7 @@ import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://web-profile-ivory.vercel.app"),
-  title: "Matheus Rodrigues",
+  title: "Matheus Rodrigues • Engenheiro de Software",
   description:
     "Sou Matheus Rodrigues, engenheiro de software com experiência em Next.js, React, Spring Boot, Flask, Node.js, Docker, Kubernetes, AWS, Azure e muito mais.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Matheus Rodrigues • Desenvolvedor Fullstack & Cloud",
+    title: "Matheus Rodrigues • Engenheiro de Software",
     description:
       "Portfólio de Matheus Rodrigues — tecnologias modernas como Next.js, React, Spring Boot, Docker, Kubernetes, AWS, Azure e muito mais.",
     url: "https://web-profile-ivory.vercel.app/",
