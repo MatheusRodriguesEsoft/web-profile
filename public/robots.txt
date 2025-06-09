@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://web-profile-ivory.vercel.app
+
+# Sitemaps
+Sitemap: https://web-profile-ivory.vercel.app/sitemap.xml
