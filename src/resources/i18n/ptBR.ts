@@ -10,7 +10,7 @@ const ptBr: Translations = {
   about: {
     greeting: "Olá, eu sou",
     description:
-      "Sou Engenheiro de Software e moro em Formosa - GO, Brasil. Gosto de resolver problemas complexos e desenvolver inovações para a internet, seja em sites, aplicativos ou outras soluções digitais. Com mais de 5 anos de experiência, adquiri amplo conhecimento em diversas áreas, entregando resultados práticos e eficientes em meus projetos.",
+      "Sou Engenheiro de Software e moro em Brasília - DF, Brasil. Gosto de resolver problemas complexos e desenvolver inovações para a internet, seja em sites, aplicativos ou outras soluções digitais. Com mais de 5 anos de experiência, adquiri amplo conhecimento em diversas áreas, entregando resultados práticos e eficientes em meus projetos.",
   },
   workCard: {
     seeProject: "Ver Projeto",
