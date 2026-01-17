@@ -2,15 +2,34 @@
 import { ActionsContext } from "@/context/ActionsContext";
 import { Menu } from "./Menu";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const Header = () => {
   const { onStars } = useContext(ActionsContext);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
       className={`${
-        onStars ? "bg-black md:bg-transparent" : "bg-black"
-      } w-full h-20 flex items-center justify-center  dark:bg-elevated dark:text-white fixed z-1000`}
+        isScrolled
+          ? "backdrop-blur-sm bg-white/1 "
+          : onStars
+          ? "bg-transparent md:bg-transparent"
+          : "bg-transparent"
+      } w-full h-20 flex items-center justify-center dark:text-white fixed z-1000 transition-all duration-300`}
     >
       <div className="w-full uppercase max-w-[1440px] flex items-center justify-between px-[20px] md:px-[80px] lg:px-[120px]">
         <Link
