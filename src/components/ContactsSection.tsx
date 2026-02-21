@@ -1,10 +1,14 @@
 "use client";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ActionsContext } from "@/context/ActionsContext";
 import { FiMail, FiGithub, FiLinkedin, FiSend } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { getTranslation } from "@/resources/lang";
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 export const ContactsSection = () => {
   const { sectionRefs, lang } = useContext(ActionsContext);
@@ -13,24 +17,35 @@ export const ContactsSection = () => {
   const [loading, setLoading] = useState(false);
   const translation = getTranslation(lang);
 
+  useEffect(() => {
+    if (PUBLIC_KEY) emailjs.init(PUBLIC_KEY);
+  }, []);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!formRef.current) return;
+    if (!formRef.current) {
+      setLoading(false);
+      return;
+    }
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      alert(
+        "Configuração de email incompleta. Verifique as variáveis NEXT_PUBLIC_EMAILJS_* no .env.local"
+      );
+      setLoading(false);
+      return;
+    }
 
     emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, { publicKey: PUBLIC_KEY })
       .then(() => {
         alert(translation.contacts.success);
         formRef.current?.reset();
       })
-      .catch(() => {
+      .catch((err: unknown) => {
+        console.error("EmailJS error:", err);
         alert(translation.contacts.error);
       })
       .finally(() => setLoading(false));
