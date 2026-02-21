@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://web-profile-ivory.vercel.app
+Host: https://www.matheusrodrigues.me
 
 # Sitemaps
-Sitemap: https://web-profile-ivory.vercel.app/sitemap.xml
+Sitemap: https://www.matheusrodrigues.me/sitemap.xml

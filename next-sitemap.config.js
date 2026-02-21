@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://web-profile-ivory.vercel.app",
+  siteUrl: "https://www.matheusrodrigues.me",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 };
