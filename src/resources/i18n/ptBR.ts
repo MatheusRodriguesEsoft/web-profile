@@ -10,7 +10,7 @@ const ptBr: Translations = {
   about: {
     greeting: "Olá, eu sou",
     description:
-      "Sou Engenheiro de Software e moro em Brasília - DF, Brasil. Gosto de resolver problemas complexos e desenvolver inovações para a internet, seja em sites, aplicativos ou outras soluções digitais. Com mais de 5 anos de experiência, adquiri amplo conhecimento em diversas áreas, entregando resultados práticos e eficientes em meus projetos.",
+      "Engenheiro de Software em Brasília - DF, com mais de 5 anos de experiência. Transformo problemas complexos em soluções digitais que fazem diferença: sites, aplicativos e sistemas para a web, sempre com foco em resultado e qualidade.",
   },
   workCard: {
     seeProject: "Ver Projeto",

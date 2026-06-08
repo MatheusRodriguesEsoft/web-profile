@@ -80,7 +80,7 @@ export const ContactsSection = () => {
                 <div>
                   <h3 className="text-white font-medium">WhatsApp</h3>
                   <a
-                    href="https://wa.me/+5561998896788"
+                    href="https://wa.me/+5561996219434"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-(--color-default-hover) transition-colors"

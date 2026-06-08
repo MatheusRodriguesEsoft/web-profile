@@ -10,7 +10,7 @@ const esES: Translations = {
   about: {
     greeting: "Hola, soy",
     description:
-      "Soy Ingeniero de Software y actualmente vivo en Brasília - DF, Brasil. Me gusta resolver problemas complejos y desarrollar soluciones innovadoras para la web, ya sea mediante sitios web, aplicaciones u otras herramientas digitales. Con más de 5 años de experiencia, he adquirido un conocimiento sólido en diversas áreas, entregando resultados prácticos y eficientes en mis proyectos.",
+      "Ingeniero de Software en Brasília - DF, con más de 5 años de experiencia. Transformo problemas complejos en soluciones digitales que marcan la diferencia: sitios web, aplicaciones y sistemas para la web, siempre con foco en resultados y calidad.",
   },
   workCard: {
     seeProject: "Ver Proyecto",

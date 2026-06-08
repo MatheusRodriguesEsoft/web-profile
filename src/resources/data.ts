@@ -13,7 +13,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
   {
     icon: FaWhatsapp,
     label: 'WhatsApp',
-    href: 'https://wa.me/+5561998896788'
+    href: 'https://wa.me/+5561996219434'
   },
   {
     icon: HiOutlineMail,
